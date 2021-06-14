@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.codechase</groupId>
+    <artifactId>rpc_project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>socket_client</module>
+        <module>socket_server</module>
+    </modules>
+
+    <properties>
+        <lombok.version>1.18.20</lombok.version>
+        <slf4j-api.version>1.7.25</slf4j-api.version>
+        <socket_server.version>1.0-SNAPSHOT</socket_server.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codechase</groupId>
+                <artifactId>socket_server</artifactId>
+                <version>${socket_server.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
